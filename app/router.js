@@ -12,5 +12,6 @@ Router.map(function () {
 
   this.route('dashboard', function () {
     this.route('web');
+    this.route('mobile');
   });
 });
