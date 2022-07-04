@@ -32,7 +32,6 @@ module.exports = function (environment) {
 
     ENV.rootURL = '/';
     ENV.locationType = 'auto';
- 
   }
 
   if (environment === 'test') {
