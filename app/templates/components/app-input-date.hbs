@@ -1,0 +1,53 @@
+<div class='d-flex flex-column input-block w-100'>
+  <div
+    class='input-block__label d-flex mb-2
+      {{if label "justify-content-between" "justify-content-end"}}'
+  >
+    <label class='mr-1'>
+      <span>{{label}}
+        {{#if required}}
+          <i class='fa fa-circle own_require ml-1'></i>
+        {{/if}}
+      </span>
+    </label>
+  </div>
+  <div class='input-block__input'>
+    {{#if isEditable}}
+      <div class='form-field--icon form-field--icon-right'>
+        {{app-date-time-picker
+          value
+          class=(if showErrorMessage 'form-control is-invalid' 'form-control')
+          options=(hash
+            step=this.step
+            timepicker=false
+            format='d/m/Y'
+            minDate=this.minDate
+            maxDate=this.maxDate
+          )
+          formatoptions=(hash formatDate='DD/MM/YYYY')
+          action=(action (mut value))
+        }}
+        <div class='icon icon--right pe-none'>
+          <i class='bx bx-calendar text-gray-300'></i>
+        </div>
+      </div>
+    {{else}}
+      {{#if valuePath}}
+        {{if
+          (and
+            (not-eq get-property model valuePath null)
+            (not (is-empty (get-property model valuePath)))
+          )
+          (moment-format (get-property model valuePath) 'DD-MM-YYYY HH:mm')
+          ''
+        }}
+      {{else}}
+        {{if
+          (and (not-eq model null) (not (is-empty model)))
+          (moment-format model 'DD-MM-YYYY HH:mm')
+          'Test'
+        }}
+      {{/if}}
+    {{/if}}
+  </div>
+</div>

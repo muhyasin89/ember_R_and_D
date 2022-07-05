@@ -44,5 +44,5 @@ export default Route.extend({
           'Convenience is at your doorstep with this charming downtown rental. Great restaurants and active night life are within a few feet.',
       },
     ];
-   },
+  },
 });
