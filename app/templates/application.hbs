@@ -1,7 +1,20 @@
-{{page-title "RD"}}
-
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="container">
+  <div class="menu">
+   <LinkTo @route="index">
+      <h1>
+        <em>SuperRentals</em>
+      </h1>
+    </LinkTo>
+    <div class="links">
+     <LinkTo @route="about" class="menu-about">
+        About
+      </LinkTo>
+     <LinkTo @route="contact" class="menu-contact">
+        Contact
+      </LinkTo>
+    </div>
+  </div>
+  <div class="body">
+    {{outlet}}
+  </div>
+</div>
