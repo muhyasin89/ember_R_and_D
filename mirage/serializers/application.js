@@ -1,3 +1,12 @@
-import { JSONAPISerializer } from 'miragejs';
+// mirage/serializers/application.js
+import { Serializer } from 'miragejs';
 
-export default JSONAPISerializer.extend({});
+export default Serializer.extend({
+  keyForAttribute(attr) {
+    return dasherize(attr);
+  },
+
+  keyForRelationship(attr) {
+    return dasherize(attr);
+  }
+});
