@@ -8,5 +8,5 @@ export default Serializer.extend({
 
   keyForRelationship(attr) {
     return dasherize(attr);
-  }
+  },
 });

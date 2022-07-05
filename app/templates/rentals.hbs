@@ -7,6 +7,17 @@
   </LinkTo>
 </div>
 
+<ListFilter
+ @filter={{action "filterByCity"}}
+as |filteredResults|
+>
+  <ul class="results">
+    {{#each filteredResults as |rentalUnit|}}
+      <li><RentalListing @rental={{rentalUnit}} /></li>
+    {{/each}}
+  </ul>
+</ListFilter>
+{{outlet}}
 {{#each this.model as |rentalUnit|}}
   <RentalListing @rental={{rentalUnit}} />
 {{/each}}
