@@ -1,3 +1,11 @@
-{{page-title "Web"}}
+{{page-title 'Web'}}
 Dashboard web
+<AppBar />
 {{outlet}}
+
+<select
+  class='form-control app-combo-status float-right'
+  onchange={{action 'onChangeStatusCombo' value='target.value'}}
+>
+  
+</select>
