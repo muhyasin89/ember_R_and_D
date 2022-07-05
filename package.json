@@ -49,8 +49,6 @@
     "ember-template-lint": "^4.3.0",
     "ember-welcome-page": "^6.2.0",
     "eslint": "^7.32.0",
-    "ember-browserify": "^1.2.2",
-    "ember-cli-sass": "^10.0.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-ember": "^10.5.9",
     "eslint-plugin-node": "^11.1.0",
