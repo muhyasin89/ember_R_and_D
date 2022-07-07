@@ -45,10 +45,13 @@
     "ember-fetch": "^8.1.1",
     "ember-load-initializers": "^2.1.2",
     "ember-page-title": "^7.0.0",
+    "ember-power-calendar": "^0.18.0",
+    "ember-power-calendar-moment": "^0.2.0",
     "ember-qunit": "^5.1.5",
     "ember-resolver": "^8.0.3",
     "ember-source": "~4.3.0",
     "ember-template-lint": "^4.3.0",
+    "ember-truth-helpers": "^3.0.0",
     "ember-welcome-page": "^6.2.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.5.0",
@@ -57,6 +60,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-qunit": "^7.2.0",
     "loader.js": "^4.7.0",
+    "moment": "^2.29.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.6.1",
     "qunit": "^2.18.0",
@@ -68,5 +72,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "ember-moment": "^10.0.0"
   }
 }
